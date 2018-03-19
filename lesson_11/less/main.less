@@ -1,0 +1,69 @@
+/* Colors */
+
+@dark-text: #333333;
+@orange-text: #fd8569;
+@main-text: #a3a3a3;
+@light-text: #e3f3fe;
+@item-1: #4eb2f7;
+@item-2: #c049f8;
+@item-3: #817eff;
+@item-4: #f74770;
+@item-4-hover: darken(@item-4, 20%)
+
+.trs(@property: all; @time: 0.5s) {
+	transition: @property @time;
+}
+
+.photo {
+	width: 100%;
+	height: 300px;
+	margin-top: 2rem;
+	box-shadow: 1px 1px 5px #333;
+	background: url(../img/1.jpg) no-repeat center center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+	&:hover {
+		.photo_text {
+			transform: scale(1,1);
+			.trs(all; 1s);
+		}
+		.photo_btn {
+			transform: scale(1,1) translateY(0);
+			.trs(all; 1s)
+		}
+	}
+	&_text {
+		color: #fff;
+		text-align: center;
+		font-size: 1rem;
+		text-shadow: 1px 1px 1px @item-3;
+		transform: scale(0,0);
+	}
+	&_btn {
+		width: 70%;
+		font-family: 'Times New Romasn', serif;
+		font-size: 1rem;
+		background-color: @light-text;
+		outline: none;
+		height: 30px;
+		border: 1px solid black;
+		border-radius: 15px;
+		color: @item-3;
+		transform: scale(0,0) translateY(1000%);
+		&:hover {
+			color: @item-3;
+			font-size: 1.5rem;
+			height: 50px;
+			border-radius: 30px;
+			.trs(all; 0.5s);
+			background-color: @item-4;
+			.photo_text {
+				color: #aeaeae;
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+/* Colors */
+.photo {
+  width: 100%;
+  height: 300px;
+  margin-top: 2rem;
+  box-shadow: 1px 1px 5px #333;
+  background: url(../img/1.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.photo:hover .photo_text {
+  transform: scale(1, 1);
+  transition: all 1s;
+}
+.photo:hover .photo_btn {
+  transform: scale(1, 1) translateY(0);
+  transition: all 1s;
+}
+.photo_text {
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px #817eff;
+  transform: scale(0, 0);
+}
+.photo_btn {
+  width: 70%;
+  font-family: 'Times New Romasn', serif;
+  font-size: 1rem;
+  background-color: #e3f3fe;
+  outline: none;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 15px;
+  transform: scale(0, 0) translateY(1000%);
+}
+.photo_btn:hover {
+  color: #3c0310;
+  font-size: 1.5rem;
+  height: 50px;
+  border-radius: 30px;
+  transition: all 0.5s;
+  background-color: #f74770;
+}
+.photo_btn:hover .photo_text {
+  color: #aeaeae;
+}
