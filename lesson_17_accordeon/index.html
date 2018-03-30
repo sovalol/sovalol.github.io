@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson_17</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/reset.css">
+
+</head>
+<body>
+
+<div class="page">
+	<h2 class="questions">Ответы на вопросы</h2>
+	<h3 class="questions qwe">Которые нам задают чаще всего</h3>
+	<span class="line"></span>
+	<div class="accordion">
+		<div><a class="tab" href="#content-1">Сколько времени может занять уборка 3-крмнатной квартиры?</a></div>
+		<div id="content-1" class="content">
+			<p>Быстрая уборка 3 комнатной квартиры, которая включает в себя мытье полов, протирку пыли и зеркал занимает около 3 часов. Но, конечно, многое зависит от степени загрязненности и заставленности комнат</p>
+		</div>
+		<div><a class="tab" href="#content-2">Сколько времени может занять уборка 3-крмнатной квартиры?</a></div>
+		<div id="content-2" class="content">
+			<p>Быстрая уборка 3 комнатной квартиры, которая включает в себя мытье полов, протирку пыли и зеркал занимает около 3 часов. Но, конечно, многое зависит от степени загрязненности и заставленности комнат</p>
+		</div>
+		<div><a class="tab" href="#content-3">Сколько времени может занять уборка 3-крмнатной квартиры?</a></div>
+		<div id="content-3" class="content">
+			<p>Быстрая уборка 3 комнатной квартиры, которая включает в себя мытье полов, протирку пыли и зеркал занимает около 3 часов. Но, конечно, многое зависит от степени загрязненности и заставленности комнат</p>
+		</div>
+		<div><a class="tab" href="#content-4">Сколько времени может занять уборка 3-крмнатной квартиры?</a></div>
+		<div id="content-4" class="content">
+			<p>Быстрая уборка 3 комнатной квартиры, которая включает в себя мытье полов, протирку пыли и зеркал занимает около 3 часов. Но, конечно, многое зависит от степени загрязненности и заставленности комнат</p>
+		</div>
+		<div><a class="tab" href="#content-5">Сколько времени может занять уборка 3-крмнатной квартиры?</a></div>
+		<div id="content-5" class="content">
+			<p>Быстрая уборка 3 комнатной квартиры, которая включает в себя мытье полов, протирку пыли и зеркал занимает около 3 часов. Но, конечно, многое зависит от степени загрязненности и заставленности комнат</p>
+		</div>
+	</div>	
+</div>
+
+	<script src="js/jquery-1.12.4.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			var tab = $('.tab');
+
+			tab.click(function() {
+				console.log('Click');
+				var target = $(this).attr('href');
+				console.log('ssilka vedet na' + target);
+				$('.content').hide();
+				$(target).show();
+			});
+		});
+	</script>
+	
+</body>
+</html>
