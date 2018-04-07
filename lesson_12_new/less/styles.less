@@ -1,0 +1,135 @@
+@main-color: #a3b4c5;
+
+body {
+	background-color: #aeaeae;
+}
+
+.bgimg {
+	background: url(../img/1.jpg) no-repeat center center;
+	width: 100%;
+	height: 100vh;
+	min-height: 600px;
+	background-size: cover;
+}
+
+.box {
+	width: 100%;
+	text-align: center;
+	transform: translateY(-225%);
+	position: relative;
+	&:target {
+		transform: translateY(-120%);
+		transition: all 2s;
+	}
+	&_text {
+		color: #fff;
+		text-shadow: 1px 1px 2px black;
+		p {
+			margin-top: 2rem;
+		}
+		.modal-link {
+			color: #fff;
+			background-color: green;
+			padding: 1rem 3rem;
+			text-decoration: none;
+			margin-bottom: 2rem;
+			transition: all 0.5s;
+			&:hover {
+				background-color: darken(green, 10%);
+			}
+		}
+	}
+	&_btn {
+		text-decoration: none;
+		display: block;
+		margin-top: 0.5rem;
+		padding: 1rem 3rem;
+		border: 2px solid black;
+		background-color: @main-color;
+		text-transform: uppercase;
+		color: #000;
+		font-weight: bold;
+		font-family: 'Verdana', serif;
+		&:hover {
+			transition: all 0.5s;
+			background-color: darken(@main-color, 20%);
+			color: #fff;
+			border: 2px solid #fff;
+		}
+	}
+}
+
+.modal-block {
+	z-index: 2;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 900px;
+	background-color: rgba(0,0,0,.9);
+	transform: translateX(-50%);
+	display: none;
+	&:target {
+		display: none;
+	}
+	&-btn {
+		position: inherit;
+		right: 2rem;
+		top: 1rem;
+		color: #fff;
+		text-decoration: none;
+		font-size: 3rem;
+	}
+	&-text {
+		display: block;
+		width: 90%;
+		color: #fff;
+		margin: 0 auto;
+		margin-top: 5rem;
+	}
+}
+#open-modal {
+	&:target {
+		display: block;
+	}
+}
+
+.candy {
+	position: absolute;
+	display: block;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	background-color: #aeaeae;
+	top: 15rem;
+	left: 20rem;
+	z-index: 3;
+	&:target {
+		display: none;
+	}
+	&-img {
+		display: block;
+		height: 10rem;
+		width: 10rem;
+		margin: 0 auto;
+		background: url(../img/candy.png) no-repeat center center;
+		background-size: cover;
+		margin-bottom: 5rem;
+	}
+	&-btn {
+		text-decoration: none;
+		color: #fff;
+		font-size: 1.5rem;
+		background-color: #959926;
+		padding: 1rem 2rem;
+		margin-left: 4rem;
+	}
+}
+
+#open-candy {
+	display: none;
+	&:target {
+		display: block;
+	}
+}
