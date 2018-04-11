@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson_16</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="nav">
+		<ul>
+			<li><a href="">La</a></li>
+			<li><a href="">LA</a></li>
+			<li><a href="">La</a></li>
+			<li><a href="">LA</a></li>
+			<li><a href="">La</a></li>
+		</ul>
+	</div>
+
+	<a href="#" class="button">Knopka</a>
+	
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var trf = $('.nav');
+			var bing = $('.button');
+			bing.click(function() {
+				trf.css("margin-left", "30rem");
+			});
+		});
+	</script>
+
+</body>
+</html>
