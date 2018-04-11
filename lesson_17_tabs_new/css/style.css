@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+.block {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0rem;
+  width: 40rem;
+  height: 25rem;
+  background-color: #ebebeb;
+}
+.block .tabs {
+  display: block;
+  width: 100%;
+  height: 5rem;
+}
+.block .tabs .tab {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  background-color: #fff;
+  padding: 0.7rem 1rem;
+  border: 1px solid #d4dee5;
+  font-size: 10px;
+  margin-top: 2rem;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #6687a0;
+}
+.block .tabs .tab-1 {
+  margin-left: 2rem;
+}
+.block .tabs-line {
+  height: 1px;
+  display: block;
+  width: 90%;
+  margin-left: 2rem;
+  background-color: #d4dee5;
+  margin-top: -1px;
+}
+.block .tabs .active {
+  background-color: #6687a0;
+  color: #fff;
+}
+.block .left-block {
+  width: 45%;
+}
+.block .message {
+  display: block;
+  width: 43%;
+  margin-left: 19rem;
+  margin-top: -13rem;
+}
+.block .message .input-text {
+  height: 10.5rem;
+}
+.block .message .input-text:focus {
+  line-height: 1rem;
+}
+.block .button {
+  margin-left: 2rem;
+  margin-top: 3rem;
+  border: none;
+  background-color: #97d914;
+  padding: 0.7rem 2rem;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 1px solid #aeaeae;
+}
+.block .button:focus {
+  outline: none;
+}
+.label {
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  padding-bottom: 0.5rem;
+  color: #425666;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+.input {
+  display: block;
+  margin-left: 2rem;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #6687a0;
+  border-radius: 5px;
+  padding-left: 2rem;
+}
+.input:focus {
+  outline: none;
+}
+.tab-content {
+  display: none;
+}
+.tab-content-1 {
+  display: block;
+}

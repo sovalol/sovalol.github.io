@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson_17</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+
+</head>
+<body>
+
+	<div class="block">
+		<div class="tabs">
+			<div data-target="tab-content-1" class="tab tab-1 active">
+				<span>Вопросы</span>
+			</div>
+			<div data-target="tab-content-2" class="tab tab-2">
+				<span>Жалоба</span>
+			</div>
+			<div data-target="tab-content-3" class="tab tab-3">
+				<span>Регистрация</span>
+			</div>
+			<span class="tabs-line"></span>
+		</div>
+		<form class="tab-content tab-content-1" action="">
+			<div class="left-block">
+				<label class="label" for="username">имя</label>
+				<input class="input username" type="text">
+				<label class="label" for="mail">email</label>
+				<input class="input mail" type="text">
+				<label class="label" for="subject">тема сообщения</label>
+				<input class="input subject" type="text">
+			</div>
+			<div class="message">
+				<label class="label" for="message">сообщение</label>
+				<input class="input input-text" type="textarea">
+			</div>
+			<input class="button" type="submit" value="ОТПРАВИТЬ СООБЩЕНИЕ">
+		</form>
+		<div class="tab-content tab-content-2">
+			<span>Bla</span>
+		</div>
+		<div class="tab-content tab-content-3">
+			<span>Bla bla</span>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.12.4.min.js"></script>
+
+	<script>
+		var tab = $('.tab');
+		tab.click(function() {
+			console.log('Click');
+			var target = $(this).attr('data-target');
+			console.log('vkladka' + target);
+			$('.tab-content').hide();
+			$('.' + target).show();
+			$('.tab').removeClass('active');
+			$(this).toggleClass('active');
+		});
+	</script>
+	
+</body>
+</html>
